@@ -74,7 +74,7 @@ export function Hero() {
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors duration-300 flex items-center gap-2"
           >
             Ver mi trabajo
-            <ArrowDown size={16} />
+            {/* <ArrowDown size={16} /> */}
           </Button>
           <Button
             onClick={() => {
