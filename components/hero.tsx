@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import { ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { FloatingShapes } from "@/components/floating-shapes"
 
 export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null)
@@ -53,8 +54,10 @@ export function Hero() {
   }
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center pt-16">
-      <div className="max-w-3xl mx-auto px-4">
+    <section id="hero" className="min-h-screen relative flex flex-col justify-center items-center text-center pt-16">
+       <FloatingShapes />
+       
+      <div className="max-w-3xl mx-auto px-4 relative z-10">
         <h1
           ref={titleRef}
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-blue-300 bg-clip-text text-transparent"
@@ -87,7 +90,7 @@ export function Hero() {
           </Button>
         </div>
       </div>
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <ArrowDown className="text-blue-500" size={24} />
       </div>
     </section>

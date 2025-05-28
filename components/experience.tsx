@@ -29,6 +29,7 @@ export function Experience() {
       description: [
         "Lideré y gestioné proyectos de desarrollo end-to-end con stack LAMP.",
         "Desarrollé soluciones a medida entendiendo necesidades reales de clientes (SaaS, RRHH, seguros, salud).",
+        "Integré APIs de terceros como ser Twilio, MercadoPago, OpenStreetMap, etc.",
         "Aseguré calidad, escalabilidad y mantenimiento continuo del código.",
         "Implementé sistemas con web scraping, ZPL, notificaciones y control de inventario.",
         "Realicé presentaciones a clientes y configuraciones de infraestructura con VPS y Docker.",
