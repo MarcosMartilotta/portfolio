@@ -27,20 +27,46 @@ export function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+ const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
+    setIsSubmitting(true) // Start submission, disable button
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/marcos.martilotta@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      })
+      const data = await response.json()
 
-    toast.success("Mensaje enviado", {
-      description: "Gracias por contactarme. Te responderé lo antes posible.",
-    })
-
-    setFormData({ name: "", email: "", message: "" })
-    setIsSubmitting(false)
+      if (false) {
+        toast.success("Mensaje enviado", {
+          description: "Gracias por contactarme. Te responderé lo antes posible.",
+        })
+        setFormData({ name: "", email: "", message: "" }) 
+      } else {
+        const errorMessage = "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo." // data.message || 
+        toast.error("Error al enviar mensaje", {
+          description: errorMessage,
+        })
+      }
+    } catch (error) {
+      console.error("Error en la petición a FormSubmit:", error)
+      toast.error("Error de conexión", {
+        description: "No se pudo conectar con el servidor. Por favor, verifica tu conexión e inténtalo de nuevo.",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
+
 
   const contactMethods = [
     {
