@@ -32,7 +32,7 @@ export function Contact() {
     setIsSubmitting(true) // Start submission, disable button
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/marcos.martilotta@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/ef9885e09be3cd9515505dc79796cb45", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
