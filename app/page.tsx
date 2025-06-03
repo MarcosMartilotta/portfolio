@@ -4,6 +4,7 @@ import { Experience } from "@/components/experience"
 import { Skills } from "@/components/skills"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { Projects } from "@/components/projects"
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <div className="container mx-auto px-4 py-8">
         <Hero />
+        <Projects />
         <Experience />
         <Skills />
         <Contact />

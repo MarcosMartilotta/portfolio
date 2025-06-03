@@ -46,7 +46,8 @@ export function Contact() {
       })
       const data = await response.json()
 
-      if (false) {
+      if (data.success) {
+        
         toast.success("Mensaje enviado", {
           description: "Gracias por contactarme. Te responderé lo antes posible.",
         })
@@ -193,7 +194,7 @@ export function Contact() {
   )
 }
 
-function useIntersectionObserver(ref: React.RefObject<Element>, options: IntersectionObserverInit = {}): boolean {
+function useIntersectionObserver(ref: React.RefObject<HTMLElement | null>, options: IntersectionObserverInit = {}): boolean {
   const [isIntersecting, setIsIntersecting] = useState(false)
 
   useEffect(() => {
