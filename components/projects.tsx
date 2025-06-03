@@ -32,18 +32,18 @@ export function Projects() {
       technologies: ["Next.js", "DaisyUI", "TailwindCSS", "vercel"],
     },
       {
-      title: "Bot de Alquileres",
+      title: "Drive Mentor",
       description: [
-        "Creación de pagina para el proyecto Bot de alquileres, una herramienta para concoer el mejor precio tus alquileres en vista diariamente",
+        "Sistemaintegral enfocado en contactar profesores de manejo con alumnos, permitiendo agendar clases, realizar pagos y gestionar la información de ambos.",
       ],
       image: "/images/logoHeader-bg.png",
       href: "https://bot-alquileres-b877.vercel.app",
       technologies: ["Next.js", "DaisyUI", "TailwindCSS", "vercel"],
     },
       {
-      title: "Bot de Alquileres",
+      title: "Práctica de Programación",
       description: [
-        "Creación de pagina para el proyecto Bot de alquileres, una herramienta para concoer el mejor precio tus alquileres en vista diariamente",
+        "Aplicaión mobil para practicar programación, con ejercicios de diferentes niveles y lenguajes con sistema gamificado de puntuación entre usuarios.",
       ],
       image: "/images/logoHeader-bg.png",
       href: "https://bot-alquileres-b877.vercel.app",
@@ -75,13 +75,13 @@ export function Projects() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="relative w-100 h-40 rounded-lg overflow-hidden group">
+                  <div className="relative w-full h-48 rounded-lg overflow-hidden group">
                     <Image
-                      className="w-full h-full object-cover rounded-lg cursor-pointer transition-transform-filter duration-300 group-hover:scale-105 group-hover:blur" // Use group-hover
+                      className="w-full h-full object-contain rounded-lg cursor-pointer transition-transform-filter duration-300 group-hover:scale-105 group-hover:blur"
                       onClick={() => window.open(pro.href, "_blank")}
                       alt={pro.title}
-                      width={400}
-                      height={300}
+                      width={300}
+                      height={200}
                       src={pro.image}
                     />
                     {/* Description overlay */}
